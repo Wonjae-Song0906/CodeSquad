@@ -28,6 +28,19 @@ public class BlackJack {
             System.out.println(playerString);
             System.out.println(dealerString);
 
+            if(playerCard > dealerCard) {
+                System.out.println("당신이 이겼습니다.");
+                wins++;
+            }
+            else if(playerCard < dealerCard) {
+                System.out.println("딜러가 이겼습니다.");
+                losses++;
+            }
+            else {
+                System.out.println("비겼습니다.");
+                ties++;
+            }
+
 
         }
     }
