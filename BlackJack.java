@@ -41,6 +41,26 @@ public class BlackJack {
                 ties++;
             }
 
+            System.out.println("현재 전적: " + wins + "승" + ties + "무" + losses + "패");
+
+            while(true) {
+                System.out.print("한 게임 더 하시겠습니까? (Y/N) ");
+                String input = scanner.next();
+                if(input.equalsIgnoreCase("Y")) {
+                    gameCount++;
+                    System.out.println();
+                    break;
+                }
+                else if(input.equalsIgnoreCase("N")) {
+                    System.out.println("게임을 종료합니다.");
+                    System.out.println("플레이해주셔서 감사합니다.");
+                    scanner.close();
+                    return;
+                }
+                else {
+                    System.out.println("잘못 입력하셨습니다.");
+                }
+            }
 
         }
     }
