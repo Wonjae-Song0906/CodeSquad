@@ -14,7 +14,7 @@ public class BlackJack {
         int ties = 0;
         int gameCount = 1;
 
-        String playeString =  "YOU    :";
+        String playerString = "YOU    :";
         String dealerString = "DEALER :";
 
         while(true) {
@@ -22,7 +22,12 @@ public class BlackJack {
             int playerCard = random.nextInt(11) + 1;
             int dealerCard = random.nextInt(11) + 1;
 
-            
+            playerString += String.format(" [%2d]", playerCard);
+            dealerString += String.format(" [%2d]", dealerCard);
+
+            System.out.println(playerString);
+            System.out.println(dealerString);
+
 
         }
     }
